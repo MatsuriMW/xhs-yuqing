@@ -1,0 +1,11 @@
+# 运行结果：抓到的笔记、评论、编码缓存和报告
+data/
+archive/
+运行记录报告-*.md
+# build.py 生成，含本机路径和凭据 id
+workflow.json
+# 小红书登录二维码
+login-qrcode.png
+*.log
+.DS_Store
+__pycache__/
