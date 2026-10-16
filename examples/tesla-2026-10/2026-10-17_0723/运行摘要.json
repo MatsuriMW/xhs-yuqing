@@ -1,0 +1,75 @@
+{
+  "run": {
+    "run_id": "2026-10-17T07-23-28",
+    "run_at": "2026-10-16T23:23:28.108Z",
+    "run_at_local": "2026/10/17 07:23:28",
+    "trigger": "手动"
+  },
+  "search_log": [
+    {
+      "keyword": "特斯拉",
+      "kind": "search",
+      "returned": 24,
+      "taken": 8
+    },
+    {
+      "keyword": "特斯拉 投诉",
+      "kind": "search",
+      "returned": 21,
+      "taken": 8
+    },
+    {
+      "keyword": "Model Y",
+      "kind": "search",
+      "returned": 22,
+      "taken": 8
+    }
+  ],
+  "coding_stats": {
+    "total": 894,
+    "newly_coded": 894,
+    "cached": 0,
+    "missing": 0,
+    "quote_rejected": 8,
+    "target_downgraded": 0,
+    "batch_errors": []
+  },
+  "fetch_errors": [],
+  "config": {
+    "brand": "特斯拉",
+    "decision_subject": "特斯拉中国品牌公关部",
+    "keywords": [
+      "特斯拉",
+      "特斯拉 投诉",
+      "Model Y"
+    ],
+    "window_days": 1,
+    "max_notes_per_keyword": 8,
+    "comment_limit": 30,
+    "models": {
+      "coding": "deepseek-flash",
+      "report": "deepseek-flash",
+      "judge": "deepseek-v4-pro"
+    },
+    "thresholds": {
+      "spread": {
+        "mid_notes": 5,
+        "high_notes": 15,
+        "mid_interactions": 10000,
+        "high_interactions": 100000,
+        "high_delta_ratio": 1
+      },
+      "emotion": {
+        "mid_neg_ratio": 0.2,
+        "high_neg_ratio": 0.4,
+        "min_n": 20,
+        "high_recall": 5
+      },
+      "mobilization_high": 5
+    },
+    "coding_version": 2,
+    "context_notes": [
+      "「刹车踩断」「刹车踏板断裂」「踏板断了」说的是懂车帝 2026 年 10 月测出江淮尊界系列刹车踏板断裂，不是特斯拉的车况；这里的「遥遥领先」是在调侃华为系。网友常拿它和特斯拉 Roadster「会飞」放在一起对比玩梗（2026-10-17 人工核实）"
+    ]
+  }
+}

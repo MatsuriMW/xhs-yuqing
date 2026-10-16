@@ -1,0 +1,1172 @@
+{
+  "run": {
+    "run_id": "2026-10-17T07-23-28",
+    "run_at": "2026-10-16T23:23:28.108Z",
+    "run_at_local": "2026/10/17 07:23:28",
+    "trigger": "手动",
+    "platforms": [
+      "小红书"
+    ],
+    "snapshots": 4,
+    "state_note": "读到历史状态：3 次快照，1346 条已编码"
+  },
+  "window": "24 小时",
+  "sample": {
+    "keywords": [
+      "特斯拉",
+      "特斯拉 投诉",
+      "Model Y"
+    ],
+    "search_filters": {},
+    "search_log": [
+      {
+        "keyword": "特斯拉",
+        "kind": "search",
+        "returned": 24,
+        "taken": 8
+      },
+      {
+        "keyword": "特斯拉 投诉",
+        "kind": "search",
+        "returned": 21,
+        "taken": 8
+      },
+      {
+        "keyword": "Model Y",
+        "kind": "search",
+        "returned": 22,
+        "taken": 8
+      }
+    ],
+    "keywords_failed": [],
+    "notes_fetched": 24,
+    "records_total": 894,
+    "records_coded": 894,
+    "records_missing": 0,
+    "target_distribution": {
+      "本机构": 806,
+      "同名或其他机构": 58,
+      "泛讨论": 17,
+      "无法判断": 13
+    },
+    "not_ours_pct": 8,
+    "fetch_errors": 0,
+    "snapshots": 4,
+    "window_days": 1,
+    "records_in_window": 370,
+    "relevant_in_window": 349,
+    "relevant_all_time": 806
+  },
+  "change": {
+    "window": "24 小时",
+    "records": 349,
+    "prev_window_records": 2,
+    "negative": 48,
+    "prev_window_negative": 0,
+    "high_voltage": 0,
+    "prev_window_high_voltage": 0,
+    "caveat": "每篇只抓前若干条热评，越早的评论越可能没被抓到，前一窗口的数字偏少，只看方向不看幅度"
+  },
+  "spread": {
+    "platforms_covered": [
+      "小红书"
+    ],
+    "cross_platform": "未覆盖（本工作流只抓小红书）",
+    "relevant_notes": 13,
+    "new_relevant_notes": 6,
+    "authors": 13,
+    "interactions_total": 614748,
+    "interaction_delta": 1479,
+    "interaction_delta_pct": 1,
+    "window": "24 小时",
+    "notes_published_in_window": 9,
+    "window_base_run_at": null,
+    "window_interaction_delta": null,
+    "window_delta_note": "快照还不够 24 小时，窗口互动增量要等跑满一个窗口才有；下面的互动总量是这些笔记的累计值",
+    "top_notes": [
+      {
+        "rid": "n_6ad18924000000001b03238a",
+        "title": "特斯拉能飞了！新款Roadster跑车亮相",
+        "interact_total": 228457,
+        "time": "2026-10-16T02:17:08.000Z",
+        "url": "https://www.xiaohongshu.com/explore/6ad18924000000001b03238a"
+      },
+      {
+        "rid": "n_6ad17ef600000000140002ff",
+        "title": "特斯拉发布了一款会飞的跑车",
+        "interact_total": 190908,
+        "time": "2026-10-16T01:33:43.000Z",
+        "url": "https://www.xiaohongshu.com/explore/6ad17ef600000000140002ff"
+      },
+      {
+        "rid": "n_6ad184690000000012039554",
+        "title": "特斯拉把SpaceX的火箭技术装到了新车上",
+        "interact_total": 131949,
+        "time": "2026-10-16T01:56:57.000Z",
+        "url": "https://www.xiaohongshu.com/explore/6ad184690000000012039554"
+      },
+      {
+        "rid": "n_6ad17d9c000000001500e936",
+        "title": "特斯拉Roadster真的会飞！零百加速1秒！",
+        "interact_total": 42217,
+        "time": "2026-10-16T01:27:56.000Z",
+        "url": "https://www.xiaohongshu.com/explore/6ad17d9c000000001500e936"
+      },
+      {
+        "rid": "n_6ad1f3db000000001801bc66",
+        "title": "特斯拉新车最大的用途：抢车位",
+        "interact_total": 17546,
+        "time": "2026-10-16T09:52:27.000Z",
+        "url": "https://www.xiaohongshu.com/explore/6ad1f3db000000001801bc66"
+      }
+    ]
+  },
+  "emotion": {
+    "n_records": 349,
+    "n_users": 335,
+    "sentiment": {
+      "中性": 222,
+      "正面": 73,
+      "混合": 6,
+      "负面": 48
+    },
+    "negative_pct": 14,
+    "negative_or_mixed_pct": 15,
+    "tone": {
+      "陈述": 113,
+      "玩梗": 137,
+      "质疑": 38,
+      "嘲讽": 28,
+      "询问": 19,
+      "抱怨": 5,
+      "推荐": 8,
+      "避雷警告": 1
+    },
+    "intense_negative": 34,
+    "collective_recall": 0,
+    "negative_users": 53
+  },
+  "content": {
+    "topics": {
+      "设计与配置": 145,
+      "未标注": 138,
+      "品牌与创始人言论": 39,
+      "其他": 8,
+      "产品质量与故障": 6,
+      "价格与优惠": 10,
+      "安全事故": 5,
+      "销售与交付": 12,
+      "车机与软件": 1,
+      "辅助驾驶": 2,
+      "续航与充电": 1,
+      "售后与维修": 1
+    },
+    "topics_in_negative": {
+      "未标注": 6,
+      "设计与配置": 32,
+      "品牌与创始人言论": 7,
+      "产品质量与故障": 2,
+      "销售与交付": 6,
+      "其他": 4,
+      "辅助驾驶": 1,
+      "安全事故": 1
+    },
+    "high_voltage": {},
+    "high_voltage_rids": {}
+  },
+  "mobilization": {
+    "max": 5,
+    "level_ge4": 1,
+    "level_ge5": 1,
+    "rids_ge4": [
+      "c_6ad24d28000000000702f469"
+    ]
+  },
+  "levels": {
+    "spread": "高",
+    "emotion": "低",
+    "content": "低",
+    "overall": "高",
+    "rule": "三维度各自分级，风险量级取最高，不取平均（任一维度爆表都要警惕）"
+  },
+  "background": {
+    "records_outside_window": 457,
+    "negative_outside_window": 174,
+    "all_time_negative_pct": 28,
+    "oldest_record": "2025-12-30T10:29:44.000Z",
+    "topics_in_negative": {
+      "车机与软件": 18,
+      "售后与维修": 45,
+      "产品质量与故障": 19,
+      "设计与配置": 25,
+      "品牌与创始人言论": 23,
+      "续航与充电": 4,
+      "其他": 6,
+      "未标注": 13,
+      "辅助驾驶": 5,
+      "销售与交付": 14,
+      "价格与优惠": 46,
+      "员工与招聘": 1,
+      "保险与残值": 1
+    }
+  },
+  "visibility": {
+    "note": "搜索排名、互动量、高赞只说明被看见的程度，不等于有多少人持这个态度",
+    "search_surface": [
+      {
+        "keyword": "特斯拉",
+        "top": [
+          {
+            "rank": 1,
+            "rid": "n_6ad18924000000001b03238a",
+            "title": "特斯拉能飞了！新款Roadster跑车亮相",
+            "note_type": "视频",
+            "format": "资讯转述",
+            "target": "本机构",
+            "sentiment": "中性",
+            "compare_with": "",
+            "compare_side": "无对比",
+            "interact_total": 228457,
+            "in_window": true,
+            "official": false,
+            "top_comments": [
+              {
+                "rid": "c_6ad1e1c70000000012009b37",
+                "text": "地上的车也得注意 到时候还得注意天上[微笑R]",
+                "likes": 711,
+                "in_window": true,
+                "target": "本机构",
+                "sentiment": "中性",
+                "tone": "玩梗",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6ad1c2570000000012002b3d",
+                "text": "詹姆斯邦德",
+                "likes": 429,
+                "in_window": true,
+                "target": "本机构",
+                "sentiment": "中性",
+                "tone": "玩梗",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6ad25d7b0000000008036c17",
+                "text": "特斯拉这段视频至少有三个看点：第一，大倾角贴地爬行——近乎垂直，低速还能前进后退，像磁吸一样贴着路面不掉；第二，坠落翻滚——掉下来时带翻转角度；第三，反推悬浮—",
+                "likes": 185,
+                "in_window": true,
+                "target": "本机构",
+                "sentiment": "正面",
+                "tone": "陈述",
+                "compare_with": "",
+                "compare_side": "无对比"
+              }
+            ]
+          },
+          {
+            "rank": 2,
+            "rid": "n_6ad17d9c000000001500e936",
+            "title": "特斯拉Roadster真的会飞！零百加速1秒！",
+            "note_type": "视频",
+            "format": "资讯转述",
+            "target": "本机构",
+            "sentiment": "正面",
+            "compare_with": "",
+            "compare_side": "无对比",
+            "interact_total": 42217,
+            "in_window": true,
+            "official": false,
+            "top_comments": [
+              {
+                "rid": "c_6ad18358000000003502a0be",
+                "text": "牛逼是牛逼。但是他要是在我面前0-60 一秒加速，我被喷一脸尾气。我得气的够呛",
+                "likes": 911,
+                "in_window": true,
+                "target": "本机构",
+                "sentiment": "混合",
+                "tone": "抱怨",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6ad1bb330000000012003a58",
+                "text": "重庆迎来了最懂它的车",
+                "likes": 854,
+                "in_window": true,
+                "target": "本机构",
+                "sentiment": "中性",
+                "tone": "玩梗",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6ad184e500000000030323a1",
+                "text": "喷气版本不能上路，只能赛道",
+                "likes": 254,
+                "in_window": true,
+                "target": "本机构",
+                "sentiment": "中性",
+                "tone": "陈述",
+                "compare_with": "",
+                "compare_side": "无对比"
+              }
+            ]
+          },
+          {
+            "rank": 3,
+            "rid": "n_6ad17ef600000000140002ff",
+            "title": "特斯拉发布了一款会飞的跑车",
+            "note_type": "视频",
+            "format": "资讯转述",
+            "target": "本机构",
+            "sentiment": "正面",
+            "compare_with": "",
+            "compare_side": "无对比",
+            "interact_total": 190908,
+            "in_window": true,
+            "official": false,
+            "top_comments": [
+              {
+                "rid": "c_6ad1981a0000000011033752",
+                "text": "老马这得意的小表情",
+                "likes": 15000,
+                "in_window": true,
+                "target": "本机构",
+                "sentiment": "正面",
+                "tone": "玩梗",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6ad193a6000000000702f97a",
+                "text": "这个状态为什么掉不下来？",
+                "likes": 3413,
+                "in_window": true,
+                "target": "本机构",
+                "sentiment": "中性",
+                "tone": "询问",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6ad193df00000000030306a9",
+                "text": "it sucks",
+                "likes": 2998,
+                "in_window": true,
+                "target": "本机构",
+                "sentiment": "负面",
+                "tone": "嘲讽",
+                "compare_with": "",
+                "compare_side": "无对比"
+              }
+            ]
+          },
+          {
+            "rank": 4,
+            "rid": "n_6ad1f3db000000001801bc66",
+            "title": "特斯拉新车最大的用途：抢车位",
+            "note_type": "视频",
+            "format": "玩梗二创",
+            "target": "本机构",
+            "sentiment": "中性",
+            "compare_with": "",
+            "compare_side": "无对比",
+            "interact_total": 17546,
+            "in_window": true,
+            "official": false,
+            "top_comments": [
+              {
+                "rid": "c_6ad2045900000000110363dd",
+                "text": "停个车能把路人喷死",
+                "likes": 2256,
+                "in_window": true,
+                "target": "本机构",
+                "sentiment": "中性",
+                "tone": "玩梗",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6ad21633000000000d026d1c",
+                "text": "跑高速更牛，直接跳过收费站[doge]",
+                "likes": 976,
+                "in_window": true,
+                "target": "本机构",
+                "sentiment": "中性",
+                "tone": "玩梗",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6ad21f8a0000000007037cb3",
+                "text": "理解李鸿章了！看了一天刚开始我都不敢相信[捂脸R]",
+                "likes": 552,
+                "in_window": true,
+                "target": "本机构",
+                "sentiment": "中性",
+                "tone": "玩梗",
+                "compare_with": "",
+                "compare_side": "无对比"
+              }
+            ]
+          },
+          {
+            "rank": 5,
+            "rid": "n_6ad19457000000001402c3a6",
+            "title": "定金168万？ 特斯拉Roadster II发布了",
+            "note_type": "图文",
+            "format": "资讯转述",
+            "target": "本机构",
+            "sentiment": "正面",
+            "compare_with": "",
+            "compare_side": "无对比",
+            "interact_total": 268,
+            "in_window": true,
+            "official": false,
+            "top_comments": [
+              {
+                "rid": "c_6ad1deb4000000001200463c",
+                "text": "28年才有量产版…",
+                "likes": 2,
+                "in_window": true,
+                "target": "本机构",
+                "sentiment": "中性",
+                "tone": "陈述",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6ad1bb7a00000000080104fb",
+                "text": "那个推进版国内能买吗？怎么没预订",
+                "likes": 2,
+                "in_window": true,
+                "target": "本机构",
+                "sentiment": "中性",
+                "tone": "询问",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6ad1bf2c0000000012005d27",
+                "text": "好像还没开放…",
+                "likes": 2,
+                "in_window": true,
+                "target": "本机构",
+                "sentiment": "中性",
+                "tone": "陈述",
+                "compare_with": "",
+                "compare_side": "无对比"
+              }
+            ]
+          }
+        ],
+        "ours": 5,
+        "ours_negative": 0
+      },
+      {
+        "keyword": "特斯拉 投诉",
+        "top": [
+          {
+            "rank": 1,
+            "rid": "n_6a5e39b100000000220186dc",
+            "title": "对特斯拉寒心",
+            "note_type": "图文",
+            "format": "亲历分享",
+            "target": "本机构",
+            "sentiment": "负面",
+            "compare_with": "",
+            "compare_side": "无对比",
+            "interact_total": 312,
+            "in_window": false,
+            "official": false,
+            "top_comments": [
+              {
+                "rid": "c_6a5f0686000000001500993c",
+                "text": "[微笑R]虽然不知道你能不能维权成功，但是还是吃一堑长一智吧，不要过于相信电脑，下车一定要带钥匙。钥匙明明在车里，电脑抽风，车子莫名落锁的事一点也不新鲜。",
+                "likes": 8,
+                "in_window": false,
+                "target": "本机构",
+                "sentiment": "负面",
+                "tone": "陈述",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6a5e3d32000000000b03b2ff",
+                "text": "一定要起诉",
+                "likes": 5,
+                "in_window": false,
+                "target": "本机构",
+                "sentiment": "负面",
+                "tone": "陈述",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6a6b369e0000000005016eb7",
+                "text": "羡慕你碰到了专业的客服",
+                "likes": 4,
+                "in_window": false,
+                "target": "本机构",
+                "sentiment": "负面",
+                "tone": "抱怨",
+                "compare_with": "",
+                "compare_side": "无对比"
+              }
+            ]
+          },
+          {
+            "rank": 2,
+            "rid": "n_6a221e640000000022025a83",
+            "title": "🚨特斯拉车主“投诉无回应”？",
+            "note_type": "图文",
+            "format": "亲历分享",
+            "target": "本机构",
+            "sentiment": "负面",
+            "compare_with": "",
+            "compare_side": "无对比",
+            "interact_total": 175,
+            "in_window": false,
+            "official": false,
+            "top_comments": [
+              {
+                "rid": "c_6a223de00000000029035eaf",
+                "text": "没事，特斯拉粉丝会帮特斯拉维权[抠鼻R]",
+                "likes": 39,
+                "in_window": false,
+                "target": "本机构",
+                "sentiment": "负面",
+                "tone": "嘲讽",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6a22b7590000000029036e5d",
+                "text": "特斯拉粉丝会攻击车主，特斯拉黑粉才会帮忙声援，维护特斯拉车主权益",
+                "likes": 12,
+                "in_window": false,
+                "target": "本机构",
+                "sentiment": "负面",
+                "tone": "嘲讽",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6a236668000000002a032013",
+                "text": "我是特斯拉的老车主，非常赞同博主的抱怨，特斯拉公司不关心用户！",
+                "likes": 8,
+                "in_window": false,
+                "target": "本机构",
+                "sentiment": "负面",
+                "tone": "抱怨",
+                "compare_with": "",
+                "compare_side": "无对比"
+              }
+            ]
+          },
+          {
+            "rank": 3,
+            "rid": "n_6a8838330000000035027da5",
+            "title": "特斯拉维权Day3:评论区炸了！原来不止我一人",
+            "note_type": "图文",
+            "format": "亲历分享",
+            "target": "本机构",
+            "sentiment": "负面",
+            "compare_with": "",
+            "compare_side": "无对比",
+            "interact_total": 413,
+            "in_window": false,
+            "official": false,
+            "top_comments": [
+              {
+                "rid": "c_6a8839dc000000000b01a2c6",
+                "text": "按特斯拉的质保规则 没有以换代修这项承诺 除非电池包失去维修价值 才会给你换一个比当前电池包更好的电池 祝你维权顺利",
+                "likes": 6,
+                "in_window": false,
+                "target": "本机构",
+                "sentiment": "中性",
+                "tone": "陈述",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6a8d96bd000000000202b4fe",
+                "text": "你这没流量的 得国产电车维权才有流量",
+                "likes": 6,
+                "in_window": false,
+                "target": "本机构",
+                "sentiment": "中性",
+                "tone": "嘲讽",
+                "compare_with": "国产电车",
+                "compare_side": "本机构落下风"
+              },
+              {
+                "rid": "c_6a88e3a6000000000a024af6",
+                "text": "粉丝既然都懂。找粉丝修呗",
+                "likes": 6,
+                "in_window": false,
+                "target": "本机构",
+                "sentiment": "负面",
+                "tone": "嘲讽",
+                "compare_with": "",
+                "compare_side": "无对比"
+              }
+            ]
+          },
+          {
+            "rank": 4,
+            "rid": "n_6acb9d83000000000202bd2f",
+            "title": "特斯拉安全带钢缆断裂被要求自费维修",
+            "note_type": "视频",
+            "format": "资讯转述",
+            "target": "本机构",
+            "sentiment": "负面",
+            "compare_with": "",
+            "compare_side": "无对比",
+            "interact_total": 75,
+            "in_window": false,
+            "official": false,
+            "top_comments": [
+              {
+                "rid": "c_6acbc013000000000502b1a9",
+                "text": "自适应一下",
+                "likes": 4,
+                "in_window": false,
+                "target": "本机构",
+                "sentiment": "负面",
+                "tone": "玩梗",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6acc0d48000000000702f427",
+                "text": "水军牌子",
+                "likes": 3,
+                "in_window": false,
+                "target": "本机构",
+                "sentiment": "负面",
+                "tone": "嘲讽",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6acba2310000000008033092",
+                "text": "看看那位女士的毛豆3的安全带装饰盖，都被人为的撬成啥样了[大笑R]想讹钱，想疯了吧[大笑R]",
+                "likes": 3,
+                "in_window": false,
+                "target": "本机构",
+                "sentiment": "正面",
+                "tone": "质疑",
+                "compare_with": "",
+                "compare_side": "无对比"
+              }
+            ]
+          },
+          {
+            "rank": 5,
+            "rid": "n_6aa38879000000002a0274be",
+            "title": "特斯拉售后投诉真的是鬼打墙",
+            "note_type": "图文",
+            "format": "亲历分享",
+            "target": "本机构",
+            "sentiment": "负面",
+            "compare_with": "",
+            "compare_side": "无对比",
+            "interact_total": 17,
+            "in_window": false,
+            "official": false,
+            "top_comments": [
+              {
+                "rid": "c_6aa57673000000000100be6f",
+                "text": "我这边服务中心不负责，我投诉也是400推给门店，门店说找400，最后门店说他就代表特斯拉[笑哭R]",
+                "likes": 1,
+                "in_window": false,
+                "target": "本机构",
+                "sentiment": "负面",
+                "tone": "抱怨",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6aa389470000000014001361",
+                "text": "直营的就是门店也是特斯拉自己的工作人员呀，你可以像店长反馈",
+                "likes": 1,
+                "in_window": false,
+                "target": "本机构",
+                "sentiment": "中性",
+                "tone": "陈述",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6aa5f661000000001403a8b1",
+                "text": "是的 真的是鬼打墙",
+                "likes": 0,
+                "in_window": false,
+                "target": "本机构",
+                "sentiment": "负面",
+                "tone": "抱怨",
+                "compare_with": "",
+                "compare_side": "无对比"
+              }
+            ]
+          }
+        ],
+        "ours": 5,
+        "ours_negative": 5
+      },
+      {
+        "keyword": "Model Y",
+        "top": [
+          {
+            "rank": 1,
+            "rid": "n_6a22681c0000000020038020",
+            "title": "",
+            "note_type": "图文",
+            "format": "亲历分享",
+            "target": "本机构",
+            "sentiment": "正面",
+            "compare_with": "宝马、国产新能源",
+            "compare_side": "本机构占上风",
+            "interact_total": 237,
+            "in_window": false,
+            "official": false,
+            "top_comments": [
+              {
+                "rid": "c_6a8faf83000000000200c184",
+                "text": "好好吃甲醇菜",
+                "likes": 33,
+                "in_window": false,
+                "target": "无法判断",
+                "sentiment": "中性",
+                "tone": "陈述",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6a4a65030000000029036f56",
+                "text": "这硬夸的至刚至猛[点赞R][点赞R]。希望能你一直拥有这台车",
+                "likes": 29,
+                "in_window": false,
+                "target": "本机构",
+                "sentiment": "负面",
+                "tone": "嘲讽",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6a59b00d000000002901b19b",
+                "text": "不能更赞同[偷笑R]真的同感",
+                "likes": 11,
+                "in_window": false,
+                "target": "本机构",
+                "sentiment": "中性",
+                "tone": "陈述",
+                "compare_with": "",
+                "compare_side": "无对比"
+              }
+            ]
+          },
+          {
+            "rank": 2,
+            "rid": "n_6ad1805b000000001400097d",
+            "title": "Model Y，已经“无法无天”了！",
+            "note_type": "图文",
+            "format": "资讯转述",
+            "target": "本机构",
+            "sentiment": "正面",
+            "compare_with": "国产友商、吉利星愿",
+            "compare_side": "本机构占上风",
+            "interact_total": 335,
+            "in_window": true,
+            "official": false,
+            "top_comments": [
+              {
+                "rid": "c_6ad1837d000000000702acfe",
+                "text": "不是它有多好，而是对国内的车不信任",
+                "likes": 137,
+                "in_window": true,
+                "target": "本机构",
+                "sentiment": "中性",
+                "tone": "陈述",
+                "compare_with": "国产车",
+                "compare_side": "本机构占上风"
+              },
+              {
+                "rid": "c_6ad236a400000000110305a4",
+                "text": "没办法 有些信任一旦打破了 就很难再建立 比如奶粉[doge]",
+                "likes": 87,
+                "in_window": true,
+                "target": "泛讨论",
+                "sentiment": "中性",
+                "tone": "陈述",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6ad1ea96000000000801de70",
+                "text": "目前除了特斯拉也就小米了",
+                "likes": 19,
+                "in_window": true,
+                "target": "本机构",
+                "sentiment": "正面",
+                "tone": "陈述",
+                "compare_with": "小米",
+                "compare_side": "不分高下"
+              }
+            ]
+          },
+          {
+            "rank": 3,
+            "rid": "n_6accca1b000000001a02a9a0",
+            "title": "爆了！Model Y 9月卖了5万辆，拿下销冠",
+            "note_type": "图文",
+            "format": "资讯转述",
+            "target": "本机构",
+            "sentiment": "中性",
+            "compare_with": "小米 SU7",
+            "compare_side": "本机构占上风",
+            "interact_total": 1277,
+            "in_window": false,
+            "official": false,
+            "top_comments": [
+              {
+                "rid": "c_6acd968d000000001001e30d",
+                "text": "都那么有钱么 快30w的车都信手拈来拿第一",
+                "likes": 62,
+                "in_window": false,
+                "target": "本机构",
+                "sentiment": "中性",
+                "tone": "陈述",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6acdb342000000000b0363b3",
+                "text": "在意的，开长途感觉好累，座椅梆梆硬，不过平时市内通勤还好，可能我就是他们所说的自适应吧[doge]",
+                "likes": 49,
+                "in_window": false,
+                "target": "本机构",
+                "sentiment": "负面",
+                "tone": "抱怨",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6acd84d1000000000502a2a9",
+                "text": "3一直不行 3家用属性太差",
+                "likes": 48,
+                "in_window": false,
+                "target": "本机构",
+                "sentiment": "负面",
+                "tone": "抱怨",
+                "compare_with": "",
+                "compare_side": "无对比"
+              }
+            ]
+          },
+          {
+            "rank": 4,
+            "rid": "n_6ab6759e000000000202801b",
+            "title": "",
+            "note_type": "图文",
+            "format": "资讯转述",
+            "target": "本机构",
+            "sentiment": "正面",
+            "compare_with": "国内造车新势力",
+            "compare_side": "本机构占上风",
+            "interact_total": 157,
+            "in_window": false,
+            "official": false,
+            "top_comments": [
+              {
+                "rid": "c_6abd2f54000000001103f8f2",
+                "text": "什么时候出[偷笑R][玫瑰R]",
+                "likes": 5,
+                "in_window": false,
+                "target": "本机构",
+                "sentiment": "中性",
+                "tone": "询问",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6ac0a9ef0000000005028167",
+                "text": "什么时候有",
+                "likes": 5,
+                "in_window": false,
+                "target": "本机构",
+                "sentiment": "中性",
+                "tone": "询问",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6ac9ed0b0000000007036d3c",
+                "text": "能不能再带一波销量",
+                "likes": 4,
+                "in_window": false,
+                "target": "本机构",
+                "sentiment": "正面",
+                "tone": "陈述",
+                "compare_with": "",
+                "compare_side": "无对比"
+              }
+            ]
+          },
+          {
+            "rank": 5,
+            "rid": "n_6a6c9d54000000002403d764",
+            "title": "model y 1年 缺点",
+            "note_type": "图文",
+            "format": "亲历分享",
+            "target": "本机构",
+            "sentiment": "负面",
+            "compare_with": "",
+            "compare_side": "无对比",
+            "interact_total": 301,
+            "in_window": false,
+            "official": false,
+            "top_comments": [
+              {
+                "rid": "c_6a6d92ca000000001403b1a6",
+                "text": "[偷笑R]我只记得一句话要买东西尤其大物件，一定要买褒贬不一的产品，全是有优点的车不能买，优缺点明显的车才是经过市场检验的车，然后根据自己喜好去选择",
+                "likes": 65,
+                "in_window": false,
+                "target": "泛讨论",
+                "sentiment": "中性",
+                "tone": "陈述",
+                "compare_with": "",
+                "compare_side": "无对比"
+              },
+              {
+                "rid": "c_6a6cad4c0000000004039171",
+                "text": "这么多缺点销量（也就是高考成绩还是第一摇摇领先，说明其他车更他妈差）都没法看了，数据做不了假呀（销量金标准）",
+                "likes": 31,
+                "in_window": false,
+                "target": "本机构",
+                "sentiment": "正面",
+                "tone": "陈述",
+                "compare_with": "其他车",
+                "compare_side": "本机构占上风"
+              },
+              {
+                "rid": "c_6a6dca0b000000000403ae4c",
+                "text": "轩逸销量也挺好的[呃R]",
+                "likes": 12,
+                "in_window": false,
+                "target": "同名或其他机构",
+                "sentiment": "中性",
+                "tone": "嘲讽",
+                "compare_with": "",
+                "compare_side": "无对比"
+              }
+            ]
+          }
+        ],
+        "ours": 5,
+        "ours_negative": 1
+      }
+    ],
+    "visible_versions": [
+      {
+        "rid": "n_6ad18924000000001b03238a",
+        "title": "特斯拉能飞了！新款Roadster跑车亮相",
+        "note_type": "视频",
+        "format": "资讯转述",
+        "target": "本机构",
+        "sentiment": "中性",
+        "compare_with": "",
+        "compare_side": "无对比",
+        "interact_total": 228457,
+        "in_window": true,
+        "official": false,
+        "top_comments": [
+          {
+            "rid": "c_6ad1e1c70000000012009b37",
+            "text": "地上的车也得注意 到时候还得注意天上[微笑R]",
+            "likes": 711,
+            "in_window": true,
+            "target": "本机构",
+            "sentiment": "中性",
+            "tone": "玩梗",
+            "compare_with": "",
+            "compare_side": "无对比"
+          },
+          {
+            "rid": "c_6ad1c2570000000012002b3d",
+            "text": "詹姆斯邦德",
+            "likes": 429,
+            "in_window": true,
+            "target": "本机构",
+            "sentiment": "中性",
+            "tone": "玩梗",
+            "compare_with": "",
+            "compare_side": "无对比"
+          },
+          {
+            "rid": "c_6ad25d7b0000000008036c17",
+            "text": "特斯拉这段视频至少有三个看点：第一，大倾角贴地爬行——近乎垂直，低速还能前进后退，像磁吸一样贴着路面不掉；第二，坠落翻滚——掉下来时带翻转角度；第三，反推悬浮—",
+            "likes": 185,
+            "in_window": true,
+            "target": "本机构",
+            "sentiment": "正面",
+            "tone": "陈述",
+            "compare_with": "",
+            "compare_side": "无对比"
+          }
+        ]
+      },
+      {
+        "rid": "n_6ad17ef600000000140002ff",
+        "title": "特斯拉发布了一款会飞的跑车",
+        "note_type": "视频",
+        "format": "资讯转述",
+        "target": "本机构",
+        "sentiment": "正面",
+        "compare_with": "",
+        "compare_side": "无对比",
+        "interact_total": 190908,
+        "in_window": true,
+        "official": false,
+        "top_comments": [
+          {
+            "rid": "c_6ad1981a0000000011033752",
+            "text": "老马这得意的小表情",
+            "likes": 15000,
+            "in_window": true,
+            "target": "本机构",
+            "sentiment": "正面",
+            "tone": "玩梗",
+            "compare_with": "",
+            "compare_side": "无对比"
+          },
+          {
+            "rid": "c_6ad193a6000000000702f97a",
+            "text": "这个状态为什么掉不下来？",
+            "likes": 3413,
+            "in_window": true,
+            "target": "本机构",
+            "sentiment": "中性",
+            "tone": "询问",
+            "compare_with": "",
+            "compare_side": "无对比"
+          },
+          {
+            "rid": "c_6ad193df00000000030306a9",
+            "text": "it sucks",
+            "likes": 2998,
+            "in_window": true,
+            "target": "本机构",
+            "sentiment": "负面",
+            "tone": "嘲讽",
+            "compare_with": "",
+            "compare_side": "无对比"
+          }
+        ]
+      },
+      {
+        "rid": "n_6ad184690000000012039554",
+        "title": "特斯拉把SpaceX的火箭技术装到了新车上",
+        "note_type": "视频",
+        "format": "资讯转述",
+        "target": "本机构",
+        "sentiment": "中性",
+        "compare_with": "",
+        "compare_side": "无对比",
+        "interact_total": 131949,
+        "in_window": true,
+        "official": false,
+        "top_comments": [
+          {
+            "rid": "c_6ad1b95f00000000110359e6",
+            "text": "他满脸写着：你看我牛不牛B",
+            "likes": 1025,
+            "in_window": true,
+            "target": "本机构",
+            "sentiment": "中性",
+            "tone": "玩梗",
+            "compare_with": "",
+            "compare_side": "无对比"
+          },
+          {
+            "rid": "c_6ad1e5b700000000060134c6",
+            "text": "车下面有空气喷嘴，吸气形成伯努利环境",
+            "likes": 920,
+            "in_window": true,
+            "target": "本机构",
+            "sentiment": "中性",
+            "tone": "陈述",
+            "compare_with": "",
+            "compare_side": "无对比"
+          },
+          {
+            "rid": "c_6ad1e4a100000000120031a2",
+            "text": "快90°了吧 这都不掉[捂脸R]",
+            "likes": 733,
+            "in_window": true,
+            "target": "本机构",
+            "sentiment": "中性",
+            "tone": "玩梗",
+            "compare_with": "",
+            "compare_side": "无对比"
+          }
+        ]
+      }
+    ],
+    "formats": {
+      "资讯转述": 10,
+      "玩梗二创": 1,
+      "其他": 1,
+      "亲历分享": 1
+    },
+    "comparison": {
+      "records": 41,
+      "with": {
+        "国产新能源车": 1,
+        "小米": 4,
+        "国产车": 8,
+        "蔚来": 4,
+        "小鹏": 2,
+        "小米 SU7 Ultra": 2,
+        "比亚迪 仰望": 1,
+        "尊界": 6,
+        "其他车企": 1,
+        "宝马": 1,
+        "雷军": 1,
+        "车载无人机": 1,
+        "理想": 1,
+        "别家车企": 1,
+        "弹射电池": 1,
+        "比亚迪": 2,
+        "国产车企": 1,
+        "国产友商": 1,
+        "吉利星愿": 1,
+        "极氪": 1,
+        "腾势": 1,
+        "国内品牌": 1,
+        "小米 YU7": 1,
+        "其他电车": 1,
+        "极氪7X": 1
+      },
+      "side": {
+        "本机构占上风": 29,
+        "不分高下": 6,
+        "本机构落下风": 6
+      }
+    }
+  },
+  "official": {
+    "configured": [],
+    "seen_in_search": [],
+    "covered": false,
+    "notes": 0,
+    "comments": 0,
+    "comments_in_window": 0,
+    "negative_in_window": 0,
+    "shouting_in_window": 0,
+    "top_negative_rids": []
+  }
+}

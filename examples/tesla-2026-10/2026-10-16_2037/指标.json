@@ -1,0 +1,223 @@
+{
+  "run": {
+    "run_id": "2026-10-16T20-37-30",
+    "run_at": "2026-10-16T12:37:30.663Z",
+    "run_at_local": "2026/10/16 20:37:30",
+    "trigger": "手动",
+    "platforms": [
+      "小红书"
+    ],
+    "snapshots": 2,
+    "state_note": "读到历史状态：1 次快照，790 条已编码"
+  },
+  "window": "24 小时",
+  "sample": {
+    "keywords": [
+      "特斯拉",
+      "特斯拉 投诉",
+      "Model Y"
+    ],
+    "search_filters": {},
+    "search_log": [
+      {
+        "keyword": "特斯拉",
+        "returned": 23,
+        "taken": 8
+      },
+      {
+        "keyword": "特斯拉 投诉",
+        "returned": 0,
+        "taken": 0
+      },
+      {
+        "keyword": "Model Y",
+        "returned": 22,
+        "taken": 8
+      }
+    ],
+    "keywords_failed": [
+      "特斯拉 投诉"
+    ],
+    "notes_fetched": 16,
+    "records_total": 545,
+    "records_coded": 543,
+    "records_missing": 2,
+    "target_distribution": {
+      "本机构": 454,
+      "同名或其他机构": 61,
+      "泛讨论": 11,
+      "无法判断": 17
+    },
+    "not_ours_pct": 14,
+    "fetch_errors": 0,
+    "snapshots": 2,
+    "window_days": 1,
+    "records_in_window": 276,
+    "relevant_in_window": 262,
+    "relevant_all_time": 454
+  },
+  "change": {
+    "window": "24 小时",
+    "records": 262,
+    "prev_window_records": 1,
+    "negative": 35,
+    "prev_window_negative": 0,
+    "high_voltage": 10,
+    "prev_window_high_voltage": 0,
+    "caveat": "每篇只抓前若干条热评，越早的评论越可能没被抓到，前一窗口的数字偏少，只看方向不看幅度"
+  },
+  "spread": {
+    "platforms_covered": [
+      "小红书"
+    ],
+    "cross_platform": "未覆盖（本工作流只抓小红书）",
+    "relevant_notes": 9,
+    "new_relevant_notes": 4,
+    "authors": 9,
+    "interactions_total": 41453,
+    "interaction_delta": 929,
+    "interaction_delta_pct": 9,
+    "window": "24 小时",
+    "notes_published_in_window": 9,
+    "window_base_run_at": null,
+    "window_interaction_delta": null,
+    "window_delta_note": "快照还不够 24 小时，窗口互动增量要等跑满一个窗口才有；下面的互动总量是这些笔记的累计值",
+    "top_notes": [
+      {
+        "rid": "n_6ad1866a000000001303ee91",
+        "title": "特斯拉Roadster真的会飞",
+        "interact_total": 21711,
+        "time": "2026-10-16T02:05:30.000Z",
+        "url": "https://www.xiaohongshu.com/explore/6ad1866a000000001303ee91"
+      },
+      {
+        "rid": "n_6ad192fc000000001800783e",
+        "title": "马斯克真的让汽车飞起来了！",
+        "interact_total": 8059,
+        "time": "2026-10-16T02:59:08.000Z",
+        "url": "https://www.xiaohongshu.com/explore/6ad192fc000000001800783e"
+      },
+      {
+        "rid": "n_6ad1e460000000000b0042c5",
+        "title": "有了特斯拉，再也不怕隧道堵车了",
+        "interact_total": 4844,
+        "time": "2026-10-16T08:46:24.000Z",
+        "url": "https://www.xiaohongshu.com/explore/6ad1e460000000000b0042c5"
+      },
+      {
+        "rid": "n_6ad180b5000000000200c3ac",
+        "title": "特斯拉发布飞行汽车",
+        "interact_total": 2356,
+        "time": "2026-10-16T01:41:09.000Z",
+        "url": "https://www.xiaohongshu.com/explore/6ad180b5000000000200c3ac"
+      },
+      {
+        "rid": "n_6ad19808000000000200ce1e",
+        "title": "。。。。。",
+        "interact_total": 2120,
+        "time": "2026-10-16T03:20:40.000Z",
+        "url": "https://www.xiaohongshu.com/explore/6ad19808000000000200ce1e"
+      }
+    ]
+  },
+  "emotion": {
+    "n_records": 262,
+    "n_users": 250,
+    "sentiment": {
+      "中性": 171,
+      "负面": 35,
+      "正面": 51,
+      "混合": 5
+    },
+    "negative_pct": 13,
+    "negative_or_mixed_pct": 15,
+    "tone": {
+      "玩梗": 86,
+      "嘲讽": 17,
+      "陈述": 98,
+      "询问": 25,
+      "质疑": 30,
+      "推荐": 3,
+      "抱怨": 3
+    },
+    "intense_negative": 19,
+    "collective_recall": 0,
+    "negative_users": 38
+  },
+  "content": {
+    "topics": {
+      "产品质量与故障": 8,
+      "安全事故": 9,
+      "其他": 18,
+      "未标注": 97,
+      "品牌与创始人言论": 16,
+      "设计与配置": 108,
+      "辅助驾驶": 7,
+      "价格与优惠": 7,
+      "销售与交付": 3,
+      "续航与充电": 3,
+      "售后与维修": 1,
+      "保险与残值": 1
+    },
+    "topics_in_negative": {
+      "未标注": 2,
+      "安全事故": 4,
+      "其他": 4,
+      "设计与配置": 23,
+      "品牌与创始人言论": 3,
+      "产品质量与故障": 4,
+      "辅助驾驶": 3,
+      "价格与优惠": 1,
+      "续航与充电": 2
+    },
+    "high_voltage": {
+      "安全": 10
+    },
+    "high_voltage_rids": {
+      "安全": [
+        "n_6ad19808000000000200ce1e",
+        "c_6ad21b200000000008035b6d",
+        "c_6ad21bd3000000000702cff4",
+        "c_6ad20568000000000b0374fa",
+        "c_6ad1bc1000000000080269b7",
+        "c_6ad1bc34000000000b036ecd",
+        "c_6ad1aa750000000008011e3d",
+        "c_6ad1b9a800000000060101ad",
+        "c_6ad1dc26000000000d025daf",
+        "c_6ad1f2920000000003031200"
+      ]
+    }
+  },
+  "mobilization": {
+    "max": 0,
+    "level_ge4": 0,
+    "level_ge5": 0,
+    "rids_ge4": []
+  },
+  "levels": {
+    "spread": "中",
+    "emotion": "中",
+    "content": "高",
+    "overall": "高",
+    "rule": "三维度各自分级，风险量级取最高，不取平均（任一维度爆表都要警惕）"
+  },
+  "background": {
+    "records_outside_window": 192,
+    "negative_outside_window": 90,
+    "all_time_negative_pct": 28,
+    "oldest_record": "2026-06-05T06:09:32.000Z",
+    "topics_in_negative": {
+      "品牌与创始人言论": 2,
+      "设计与配置": 22,
+      "价格与优惠": 55,
+      "续航与充电": 4,
+      "辅助驾驶": 4,
+      "车机与软件": 2,
+      "售后与维修": 3,
+      "产品质量与故障": 4,
+      "未标注": 6,
+      "销售与交付": 10,
+      "其他": 1
+    }
+  }
+}

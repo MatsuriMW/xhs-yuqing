@@ -1,0 +1,70 @@
+{
+  "run": {
+    "run_id": "2026-10-16T20-37-30",
+    "run_at": "2026-10-16T12:37:30.663Z",
+    "run_at_local": "2026/10/16 20:37:30",
+    "trigger": "手动"
+  },
+  "search_log": [
+    {
+      "keyword": "特斯拉",
+      "returned": 23,
+      "taken": 8
+    },
+    {
+      "keyword": "特斯拉 投诉",
+      "returned": 0,
+      "taken": 0
+    },
+    {
+      "keyword": "Model Y",
+      "returned": 22,
+      "taken": 8
+    }
+  ],
+  "coding_stats": {
+    "total": 545,
+    "newly_coded": 294,
+    "cached": 249,
+    "missing": 2,
+    "quote_rejected": 3,
+    "target_downgraded": 0,
+    "batch_errors": []
+  },
+  "fetch_errors": [],
+  "config": {
+    "brand": "特斯拉",
+    "decision_subject": "特斯拉中国品牌公关部",
+    "keywords": [
+      "特斯拉",
+      "特斯拉 投诉",
+      "Model Y"
+    ],
+    "window_days": 1,
+    "max_notes_per_keyword": 8,
+    "comment_limit": 30,
+    "models": {
+      "coding": "deepseek-flash",
+      "report": "deepseek-flash",
+      "judge": "deepseek-v4-pro"
+    },
+    "thresholds": {
+      "spread": {
+        "mid_notes": 5,
+        "high_notes": 15,
+        "mid_interactions": 10000,
+        "high_interactions": 100000,
+        "high_delta_ratio": 1
+      },
+      "emotion": {
+        "mid_neg_ratio": 0.2,
+        "high_neg_ratio": 0.4,
+        "min_n": 20,
+        "high_recall": 5
+      },
+      "mobilization_high": 5
+    },
+    "coding_version": null,
+    "context_notes": null
+  }
+}

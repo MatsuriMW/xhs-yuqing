@@ -1,0 +1,226 @@
+{
+  "run": {
+    "run_id": "2026-10-16T20-58-49",
+    "run_at": "2026-10-16T12:58:49.403Z",
+    "run_at_local": "2026/10/16 20:58:49",
+    "trigger": "手动",
+    "platforms": [
+      "小红书"
+    ],
+    "snapshots": 3,
+    "state_note": "读到历史状态：2 次快照，1084 条已编码"
+  },
+  "window": "24 小时",
+  "sample": {
+    "keywords": [
+      "特斯拉",
+      "特斯拉 投诉",
+      "Model Y"
+    ],
+    "search_filters": {},
+    "search_log": [
+      {
+        "keyword": "特斯拉",
+        "returned": 23,
+        "taken": 8
+      },
+      {
+        "keyword": "特斯拉 投诉",
+        "returned": 21,
+        "taken": 8
+      },
+      {
+        "keyword": "Model Y",
+        "returned": 22,
+        "taken": 8
+      }
+    ],
+    "keywords_failed": [],
+    "notes_fetched": 24,
+    "records_total": 906,
+    "records_coded": 906,
+    "records_missing": 0,
+    "target_distribution": {
+      "本机构": 780,
+      "同名或其他机构": 86,
+      "泛讨论": 17,
+      "无法判断": 23
+    },
+    "not_ours_pct": 12,
+    "fetch_errors": 0,
+    "snapshots": 3,
+    "window_days": 1,
+    "records_in_window": 353,
+    "relevant_in_window": 341,
+    "relevant_all_time": 780
+  },
+  "change": {
+    "window": "24 小时",
+    "records": 341,
+    "prev_window_records": 33,
+    "negative": 31,
+    "prev_window_negative": 7,
+    "high_voltage": 9,
+    "prev_window_high_voltage": 0,
+    "caveat": "每篇只抓前若干条热评，越早的评论越可能没被抓到，前一窗口的数字偏少，只看方向不看幅度"
+  },
+  "spread": {
+    "platforms_covered": [
+      "小红书"
+    ],
+    "cross_platform": "未覆盖（本工作流只抓小红书）",
+    "relevant_notes": 11,
+    "new_relevant_notes": 4,
+    "authors": 11,
+    "interactions_total": 156985,
+    "interaction_delta": 611,
+    "interaction_delta_pct": 8,
+    "window": "24 小时",
+    "notes_published_in_window": 9,
+    "window_base_run_at": null,
+    "window_interaction_delta": null,
+    "window_delta_note": "快照还不够 24 小时，窗口互动增量要等跑满一个窗口才有；下面的互动总量是这些笔记的累计值",
+    "top_notes": [
+      {
+        "rid": "n_6ad184690000000012039554",
+        "title": "特斯拉把SpaceX的火箭技术装到了新车上",
+        "interact_total": 130816,
+        "time": "2026-10-16T01:56:57.000Z",
+        "url": "https://www.xiaohongshu.com/explore/6ad184690000000012039554"
+      },
+      {
+        "rid": "n_6ad18bf3000000000202bc71",
+        "title": "特斯拉现场直播会飞的跑车",
+        "interact_total": 11141,
+        "time": "2026-10-16T02:29:07.000Z",
+        "url": "https://www.xiaohongshu.com/explore/6ad18bf3000000000202bc71"
+      },
+      {
+        "rid": "n_6ad1e460000000000b0042c5",
+        "title": "有了特斯拉，再也不怕隧道堵车了",
+        "interact_total": 5379,
+        "time": "2026-10-16T08:46:24.000Z",
+        "url": "https://www.xiaohongshu.com/explore/6ad1e460000000000b0042c5"
+      },
+      {
+        "rid": "n_6ad1fb62000000001803ac64",
+        "title": "特斯拉会飞的创作已经开始啦",
+        "interact_total": 4388,
+        "time": "2026-10-16T10:24:34.000Z",
+        "url": "https://www.xiaohongshu.com/explore/6ad1fb62000000001803ac64"
+      },
+      {
+        "rid": "n_6ad19808000000000200ce1e",
+        "title": "。。。。。",
+        "interact_total": 2167,
+        "time": "2026-10-16T03:20:40.000Z",
+        "url": "https://www.xiaohongshu.com/explore/6ad19808000000000200ce1e"
+      }
+    ]
+  },
+  "emotion": {
+    "n_records": 341,
+    "n_users": 314,
+    "sentiment": {
+      "中性": 268,
+      "负面": 31,
+      "正面": 40,
+      "混合": 2
+    },
+    "negative_pct": 9,
+    "negative_or_mixed_pct": 10,
+    "tone": {
+      "玩梗": 134,
+      "嘲讽": 21,
+      "陈述": 116,
+      "询问": 38,
+      "质疑": 22,
+      "推荐": 4,
+      "抱怨": 6
+    },
+    "intense_negative": 15,
+    "collective_recall": 0,
+    "negative_users": 33
+  },
+  "content": {
+    "topics": {
+      "产品质量与故障": 11,
+      "安全事故": 15,
+      "其他": 16,
+      "未标注": 139,
+      "品牌与创始人言论": 23,
+      "设计与配置": 119,
+      "价格与优惠": 11,
+      "销售与交付": 8,
+      "辅助驾驶": 10,
+      "续航与充电": 5,
+      "保险与残值": 1,
+      "车机与软件": 5
+    },
+    "topics_in_negative": {
+      "未标注": 2,
+      "其他": 4,
+      "产品质量与故障": 8,
+      "安全事故": 6,
+      "设计与配置": 10,
+      "品牌与创始人言论": 4,
+      "销售与交付": 2,
+      "价格与优惠": 1,
+      "辅助驾驶": 4,
+      "续航与充电": 2
+    },
+    "high_voltage": {
+      "安全": 8,
+      "虚假宣传": 1
+    },
+    "high_voltage_rids": {
+      "安全": [
+        "n_6ad19808000000000200ce1e",
+        "c_6ad1d4d0000000000b00cc33",
+        "c_6ad21b200000000008035b6d",
+        "c_6ad1d541000000000b0376e6",
+        "c_6ad1a611000000000702ec70",
+        "c_6ad1f000000000000b036888",
+        "c_6ad1f2920000000003031200",
+        "c_6ad1148d000000000b00dcc5"
+      ],
+      "虚假宣传": [
+        "c_6ad1fa160000000011035299"
+      ]
+    }
+  },
+  "mobilization": {
+    "max": 0,
+    "level_ge4": 0,
+    "level_ge5": 0,
+    "rids_ge4": []
+  },
+  "levels": {
+    "spread": "高",
+    "emotion": "中",
+    "content": "高",
+    "overall": "高",
+    "rule": "三维度各自分级，风险量级取最高，不取平均（任一维度爆表都要警惕）"
+  },
+  "background": {
+    "records_outside_window": 439,
+    "negative_outside_window": 196,
+    "all_time_negative_pct": 29,
+    "oldest_record": "2026-06-05T00:55:00.000Z",
+    "topics_in_negative": {
+      "售后与维修": 48,
+      "品牌与创始人言论": 21,
+      "产品质量与故障": 32,
+      "设计与配置": 27,
+      "未标注": 5,
+      "其他": 9,
+      "车机与软件": 14,
+      "续航与充电": 5,
+      "安全事故": 3,
+      "价格与优惠": 61,
+      "销售与交付": 15,
+      "辅助驾驶": 1,
+      "员工与招聘": 2
+    }
+  }
+}
