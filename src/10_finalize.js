@@ -97,14 +97,15 @@ const link = rid => {
   const r = byRid[rid];
   return r ? `[${rid}](${r.url})` : rid;
 };
-// 引用解析：认 [r:id]、[id1,id2]、[r:id1,r:id2]；模型常把 ID 写短，能唯一对上前缀的补全，对不上的才算编造
+// 引用解析：认 [r:id]、[id1,id2]、[r:id1,r:id2]；模型常把 ID 写短、或把评论的 c_ 写成 n_，能唯一对上的补全，对不上的才算编造
 const TOKEN = '(?:r[:_])?(?:[nc][:_])?[0-9a-f]{6,}';
 const CITE = new RegExp(`\\[(${TOKEN}(?:[,，、\\s]+${TOKEN})*)\\]`, 'g');
 const ALL_RIDS = d.records.map(r => r.rid);
 function resolveRid(tok) {
   const t = tok.replace(/^r[:_]/, '').replace(/^([nc]):/, '$1_');
   if (ALL_RIDS.includes(t)) return { rid: t, short: false };
-  const hits = ALL_RIDS.filter(r => r.startsWith(t) || r.slice(2).startsWith(t));
+  const body = t.replace(/^[nc]_/, '');
+  const hits = ALL_RIDS.filter(r => r.startsWith(t) || r.slice(2).startsWith(body));
   return hits.length === 1 ? { rid: hits[0], short: true } : { rid: null, raw: tok };
 }
 const splitIds = s => s.split(/[,，、\s]+/).filter(Boolean);
