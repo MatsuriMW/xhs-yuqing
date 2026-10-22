@@ -1,0 +1,22 @@
+{
+  "name": "yuqing-langgraph",
+  "private": true,
+  "type": "module",
+  "description": "舆情研判的 LangGraph 版：复用 ../src 的业务代码，换掉 n8n 编排，加返工循环和人工复核",
+  "scripts": {
+    "run": "node run.mjs",
+    "test": "node --test test/"
+  },
+  "dependencies": {
+    "@langchain/core": "^1.2.20",
+    "@langchain/deepseek": "^1.1.18",
+    "@langchain/langgraph": "^1.5.2",
+    "@langchain/langgraph-checkpoint-sqlite": "^1.1.0",
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "flatted": "^3.4.4",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "marked": "^18.1.1"
+  }
+}
