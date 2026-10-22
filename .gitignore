@@ -9,3 +9,5 @@ login-qrcode.png
 *.log
 .DS_Store
 __pycache__/
+# 金标集：待标注表、抽样快照和打分输出里有抓来的评论原文
+eval/golden*
