@@ -1,6 +1,6 @@
 // 用法：
-//   node run.mjs                              按人群画像路由；默认真抓 B站 和 知乎（借 Chrome 的登录态，小红书怕风控不抓）；出报告前停下等复核
-//   node run.mjs --live B站,小红书            指定这次真抓哪些平台
+//   node run.mjs                              按人群画像路由；默认真抓 B站 和 知乎（借 Chrome 的登录态）；出报告前停下等复核
+//   node run.mjs --live B站,小红书            指定这次真抓哪些平台（小红书先走 AgentKey，积分不够换 MediaCrawler）
 //   node run.mjs --audience 女性为主,高学历    不让模型判断画像，直接指定（性别：女性为主 | 中性 | 男性为主）
 //   node run.mjs --mode 事件 --event "某某事"   不让模型判断模式，直接指定（事件 | 日常）
 //   node run.mjs --bili-anon                  B站不借登录态，走公开接口（每个视频只有 3 条热评）

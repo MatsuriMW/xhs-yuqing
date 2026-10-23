@@ -67,7 +67,11 @@ config → route（画像 → 平台比重）→ fetch（各平台按比重抓�
 
 - **B站**（`sources/bilibili.mjs`）：每个关键词按综合排序（公众先看到的，记排名）和按发布时间（窗口内的新视频）各取一份，视频当「笔记」处理。默认借 Chrome 的登录态在 B站页面里发请求（`sources/opencli.mjs`），评论每页 20 条、翻到 `comment_limit`、带 IP 属地；`--bili-anon` 改走不登录的公开接口，每个视频只有 3 条热评、没有属地。请求间隔 1 秒。
 - **知乎**（`sources/zhihu.mjs`）：知乎搜索不登录直接 403，所以借 Chrome 的登录态，用 OpenCLI 的只读命令 `zhihu search` / `answer-detail` / `answer-comments`，在后台窗口里读。回答当「笔记」处理，标题用问题标题；专栏文章先跳过；知乎不给 IP 属地。每个回答约 13 秒，比 B站慢。
-- **小红书**（`sources/xhs.mjs`）：和 n8n 版同样的 MCP 调用顺序和参数，解析直接跑 `02`、`03`。为免风控，**没有拿真实小红书测过**，只用 n8n 第 61 次运行录下的 MCP 返回重放验证（`test/xhs-replay.test.mjs`）。
+- **小红书**（`sources/xhs.mjs`）：和 n8n 版同样的调用顺序（逐词搜索 → 逐篇详情和评论），解析直接跑 `02`、`03`。取数分两级，都换成 xiaohongshu-mcp 的返回格式再交给解析：
+  1. **AgentKey**（`sources/agentkey.mjs`，第三方数据接口，不用自己的账号）：搜索、图文 / 视频详情、一级评论（一页 10 条，带楼中楼和 IP 属地）各 2 积分。开抓前按「关键词数 + 篇数 × (1 + 评论页数)」估这一轮要多少积分，比如 3 个词各 3 篇、每篇 30 条评论（3 页）要 2 ×（3 + 9 × 4）= 78 积分；想省就在品牌文件里调小 `comment_limit`。密钥读环境变量 `AGENTKEY_TOKEN`，没有就读钥匙串 `agentkey-token`。
+  2. **MediaCrawler**（`sources/mediacrawler.mjs`）：剩余积分不够这一轮，或者抓到一半返回 402，整轮换它重抓。它用自己的账号登录，**有风控风险**，所以量压到和 AgentKey 一样：每词只取路由给的篇数（它本来每个关键词至少抓满一页 20 篇，启动时截掉了），请求间隔 5 秒，不展开楼中楼。它存的数据没有 IP 属地。
+
+  离线验证：n8n 第 61 次运行录下的 MCP 返回重放（`test/xhs-replay.test.mjs`）；AgentKey 一次真实返回（`test/xhs-agentkey.test.mjs`，数据在 `fixtures/agentkey/`）；MediaCrawler 按它的存储字段造的数据（`test/xhs-mediacrawler.test.mjs`）。
 
 借登录态的两个平台要求 Chrome 开着、OpenCLI 扩展已连接、在 Chrome 里登录着（`opencli bilibili whoami`、`opencli zhihu whoami` 可查）。cookie 不出浏览器，代码里不存。用的是自己的账号，量大了可能被风控。
 
@@ -78,9 +82,18 @@ npm install
 node run.mjs                      # 按画像路由，默认真抓 B站 + 知乎，停在人工复核
 node run.mjs resume <线程> --approve
 node run.mjs resume <线程> --note "人工核实过的背景"
-node run.mjs --live B站,知乎,小红书   # 小红书要先开 ../start.sh 里的 xiaohongshu-mcp
+node run.mjs --live B站,知乎,小红书   # 小红书先走 AgentKey，积分不够换 MediaCrawler
 node run.mjs --no-review --max-revisions 0
 ```
+
+MediaCrawler 只在 AgentKey 积分不够时用，第一次用前装好并登录一次（用小号，别用被风控过的号）：
+
+```bash
+git clone https://github.com/NanmiCoder/MediaCrawler ~/claude/MediaCrawler   # 装在别处就设 MEDIACRAWLER_DIR
+cd ~/claude/MediaCrawler && uv sync   # 用本机 Chrome（CDP 模式），不用装 Playwright 的浏览器
+```
+
+第一次跑到小红书时它会拉起一个独立的 Chrome（调试端口 9333，不碰 9222 上 Boss 直聘那个），在窗口里扫码登录；登录态存在 MediaCrawler 的 `browser_data/` 下，之后复用。
 
 DeepSeek 密钥读环境变量 `DEEPSEEK_API_KEY`，没有就读钥匙串 `deepseek-api-key`。结果按品牌写在 `data/live/<品牌>/`（和 n8n 版同样的 `latest.md`、`runs/`、`state.json`，外加 `feishu-preview.json`），人工写回的背景在同一目录的 `context_notes.json`。跑完的线程会删掉检查点，只有停在复核的线程留着。
 

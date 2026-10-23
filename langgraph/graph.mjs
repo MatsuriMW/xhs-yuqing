@@ -18,7 +18,7 @@ import { fetchBilibili } from "./sources/bilibili.mjs";
 import { fetchZhihu } from "./sources/zhihu.mjs";
 import { bilibiliBrowserGet } from "./sources/opencli.mjs";
 import { buildCard, alertOf, sendFeishu } from "./notify.mjs";
-import { fetchXhs, mcpCaller, replayCaller } from "./sources/xhs.mjs";
+import { fetchXhs, fetchXhsLive, replayCaller } from "./sources/xhs.mjs";
 
 export const HERE = path.dirname(fileURLToPath(import.meta.url));
 const UNFIXABLE = new Set(["R0", "R4b"]); // 采集不全重写也补不回来；ID 写短已自动补全
@@ -98,8 +98,9 @@ async function fetchData(s) {
                     : { keywords: c.keywords, perKeyword: p.per_keyword, commentPages: Math.ceil(c.comment_limit / 20), get: bilibiliBrowserGet() });
             } else if (p.name === "知乎") got = await fetchZhihu({ keywords: c.keywords, perKeyword: p.per_keyword, commentLimit: c.comment_limit });
             else if (p.name === "小红书") {
-                const mcp = await mcpCaller();
-                try { got = await fetchXhs({ configItems, callTool: mcp.callTool, perKeyword: p.per_keyword }); } finally { await mcp.close(); }
+                // 先走 AgentKey（第三方接口，不用自己的账号），积分不够换 MediaCrawler
+                got = await fetchXhsLive({ configItems, perKeyword: p.per_keyword });
+                console.log(`小红书数据来自 ${got.via}`);
             }
             got.search_log = got.search_log.map((x) => ({ ...x, keyword: `${p.name}：${x.keyword}` }));
             parts.push(got);

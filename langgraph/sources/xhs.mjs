@@ -1,22 +1,9 @@
 // 小红书数据源：照搬 n8n 版的抓取顺序——逐个关键词 search_feeds（官方号走 user_profile）→ 02 拆解笔记列表 →
 // 逐篇 get_feed_detail → 03 结构化，两步解析直接跑 ../src 的代码。
-// callTool 可以换：线上连本机的 xiaohongshu-mcp；测试时换成 n8n 执行记录的重放，不碰小红书。
-import { Client } from "@modelcontextprotocol/sdk/client/index.js";
-import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
+// callTool 可以换：线上先走 AgentKey，积分不够换 MediaCrawler（fetchXhsLive）；测试时换成 n8n 执行记录的重放，不碰小红书。
 import { runCode } from "../n8n.mjs";
-
-export async function mcpCaller(url = "http://localhost:18060/mcp") {
-    const client = new Client({ name: "yuqing-langgraph", version: "0.1.0" });
-    await client.connect(new StreamableHTTPClientTransport(new URL(url)));
-    const callTool = async (name, args) => {
-        try {
-            return { json: await client.callTool({ name, arguments: args }, undefined, { timeout: 300000 }) };
-        } catch (e) {
-            return { json: { error: String(e.message || e) } };
-        }
-    };
-    return { callTool, close: () => client.close() };
-}
+import { agentkeyCaller, creditsNeeded, QuotaError } from "./agentkey.mjs";
+import { mediacrawlerCaller } from "./mediacrawler.mjs";
 
 // configItems：01_config.js 的输出（每个关键词 / 官方号一项）；perKeyword 覆盖 max_notes_per_keyword
 export async function fetchXhs({ configItems, callTool, perKeyword }) {
@@ -42,6 +29,33 @@ export async function fetchXhs({ configItems, callTool, perKeyword }) {
         notes: s.notes, records: s.records.map((r) => ({ ...r, platform: "小红书" })),
         fetch_errors: s.fetch_errors, search_log: s.search_log, official: s.official,
     };
+}
+
+// 线上：先走 AgentKey；剩余积分不够这一轮（按关键词数、篇数、评论条数估），或者抓到一半用完，整轮换 MediaCrawler 重抓
+export async function fetchXhsLive({ configItems, perKeyword }) {
+    const { config: c } = configItems[0].json;
+    const keywords = configItems.filter((x) => x.json.kind === "search").map((x) => x.json.keyword);
+    const n = perKeyword ?? c.max_notes_per_keyword;
+    const need = creditsNeeded({ keywords: keywords.length, notes: keywords.length * n, commentLimit: c.comment_limit });
+    let why;
+    const ak = await agentkeyCaller();
+    try {
+        const have = await ak.remaining();
+        if (have >= need) {
+            try {
+                const got = await fetchXhs({ configItems, callTool: ak.callTool, perKeyword });
+                return { ...got, via: `AgentKey，花了 ${ak.spent()} 积分` };
+            } catch (e) {
+                if (!(e instanceof QuotaError)) throw e;
+                why = `AgentKey 积分中途用完（已花 ${ak.spent()}）`;
+            }
+        } else why = `AgentKey 剩 ${have} 积分，这一轮约要 ${need}`;
+    } finally {
+        await ak.close();
+    }
+    console.log(`小红书：${why}，改用 MediaCrawler`);
+    const mc = await mediacrawlerCaller({ keywords, perKeyword: n, commentLimit: c.comment_limit });
+    return { ...(await fetchXhs({ configItems, callTool: mc.callTool, perKeyword })), via: `MediaCrawler（${why}）` };
 }
 
 // 测试用：按调用顺序重放 n8n 某次执行里「搜索笔记」「抓取详情和评论」的返回
